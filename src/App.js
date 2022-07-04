@@ -85,14 +85,13 @@ function App(){
   return (
     <div className="App">
       <div className='intro-container'>
-        <div>
+        <div >
           <img className='profile-image' src="https://avatars.githubusercontent.com/u/88653294?v=4" width={200} height={200} alt="Profile"></img>
         </div>
         <h1>
-          Bem-vindo(a) ao repositório de Matheus Geambastiane. 
+          Bem-vindo(a) ao repositório de <a className="linkedinlink" href='https://www.linkedin.com/in/matheus-geambastiane-/' target="_blank">Matheus Geambastiane.</a> 
           
         </h1>
-        <h2> Atualmente temos {repos.public} projetos no modo Público</h2>
       </div>
       <div className="input-cotainer">
         <input type="text" className="input-query" onChange={ handleChange }></input>
