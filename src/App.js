@@ -51,6 +51,8 @@ import { useEffect, useState} from 'react';
 function App(){
   const [initialRepo, setinitialRepo] = useState([]);
   const [repos, setRepos] = useState([]);
+  const [order, setOrder] = useState(1);
+  const [columOrder, setColumOrder] = useState('name');
 
   useEffect(() => {
 
@@ -72,6 +74,7 @@ function App(){
     fetchRepos();
   }, []);
 
+  
   const handleChange = ({ target }) => {
     
     if(!target.value){
@@ -85,6 +88,16 @@ function App(){
     setRepos(filterepo);
 
   }
+  const handleOrder = fieldName => {
+    setOrder(-order)
+    setColumOrder(fieldName)
+
+  };
+
+  var reposo = repos.sort(( a, b ) => { 
+    return a[columOrder] < b[columOrder] ? -order : order;
+  })
+
   return (
     <div className="App">
       <div className='intro-container'>
@@ -98,6 +111,14 @@ function App(){
       </div>
       <div className="input-cotainer">
         <input type="text" placeholder='Pesquise por nome do repositório' className="input-query" onChange={ handleChange }></input>
+      </div>
+      <div>
+        <ul className='button-list'>
+
+          <button className="order-button" onClick={ e => handleOrder('name')}> Ordem alfabética</button>
+
+          <button className="order-button" onClick={ e => handleOrder('name')}> Ordem alfabética</button>
+        </ul>
       </div>
       <div className="list-container">
 
