@@ -73,11 +73,14 @@ function App(){
   }, []);
 
   const handleChange = ({ target }) => {
+    
     if(!target.value){
       setRepos(initialRepo);
       return
     }
-    const filterepo = repos.filter((repository) => repository.name.includes(target.value))
+    const targetlow = target.value.toLowerCase()
+    const filterepo = repos.filter(({ name }) => name.toLowerCase().includes(target.value.toLowerCase()));
+    
 
     setRepos(filterepo);
 
@@ -94,7 +97,7 @@ function App(){
         </h1>
       </div>
       <div className="input-cotainer">
-        <input type="text" className="input-query" onChange={ handleChange }></input>
+        <input type="text" placeholder='Pesquise por nome do repositório' className="input-query" onChange={ handleChange }></input>
       </div>
       <div className="list-container">
 

@@ -85,7 +85,8 @@ body {
   align-items: center!important;
   border-radius: 30px;
   display: flex;
-  margin: auto
+  margin: auto;
+  
 }
 
 ul {
