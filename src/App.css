@@ -9,6 +9,9 @@ body {
   display: block;
   margin-top: 50px;
 }
+.linkedinlink {
+  text-decoration: none;
+}
 
 .profile-image {
   position: relative;
