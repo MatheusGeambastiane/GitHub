@@ -29,6 +29,7 @@ body {
   list-style: none;
   margin: auto;
   text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -46,6 +47,11 @@ body {
   font-weight: 500;
   font-size: large;
   color: #ffffff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
 
 }
 
